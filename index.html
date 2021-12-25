@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>いろんな 掲示板</title>
+    <title>画面と向き合うための掲示板</title>
 
     <!-- load jQuery from network -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -18,20 +18,50 @@
 </head>
 <body>
     <!-- title header -->
-    <p class="space-top text-center fs-3 fw-bold font-monospace">いろんな 掲示板</p>
+    <p class="space-top text-center fs-3 fw-bold font-monospace">画面と向き合うための掲示板</p>
 
     <!-- site description -->
-    <p class="text-center fs-6 font-monospace">
+    <p class="text-center fs-6 font-1">
         このサイトでは、自分の好きな掲示板（スレッド）を作成し、
         <br>そのスレッド上で投稿・会話をすることができます。
     </p>
 
-    <!-- navbar with 3 rows and search bar -->
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-            <p>最近作成されたスレッド</p>
+    <!-- spacer1 -->
+    <div class="spacer-1"></div>
+
+    <!-- show recent update threads -->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center fs-3 fw-bold font-monospace">最近更新されたスレッド</h2>
+            </div>
         </div>
-    </nav>
+        <div class="row">
+            <div class="col-12">
+                <div class="card-deck">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">スレッドタイトル</h5>
+                            <p class="card-text">スレッドの説明文</p>
+                            <a href="#" class="btn btn-primary">スレッドへ</a>
+                            <p class="card-text">最終更新: XXXX/XX/XX XX:XX:XX</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">スレッドタイトル</h5>
+                            <p class="card-text">スレッドの説明文</p>
+                            <a href="#" class="btn btn-primary">スレッドへ</a>
+                            <p class="card-text">最終更新: XXXX/XX/XX XX:XX:XX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- spacer2 -->
+    <div class="spacer-2"></div>
 
     <!-- thread create form -->
     <div class="container">
@@ -43,15 +73,18 @@
                         <input type="text" class="form-control" id="thread_title" name="thread_title">
                     </div>
                     <div class="form-group">
+                        <!-- mail address input form -->
+                        <label for="thread_content"></label>
+                        
+                    </div>
+                    <div class="form-group">
                         <label for="thread_content">スレッド内容</label>
                         <textarea class="form-control" id="thread_content" name="thread_content" rows="3"></textarea>
                     </div>
                     <!-- thread rule -->
                     <div class="form-group">
                         <label for="thread_rule">スレッドルール</label>
-                        <textarea class="form-control" id="thread_rule" name="thread_rule" rows="5">R18並びにNSFWコンテンツの投稿は禁止です。
-出会い目的での利用は禁止です。
-パスワード等個人情報の添付はやめてください。</textarea>
+                        <textarea class="form-control" id="thread_rule" name="thread_rule" rows="5">R18並びにNSFWコンテンツの投稿は禁止です。</textarea>
                     <button type="submit" class="btn btn-primary">スレッド作成</button>
                 </form>
             </div>

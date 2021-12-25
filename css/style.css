@@ -1,1 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
 
+p.font-1 {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.space-top {
+    margin-top: 20px;
+}
+
+.spacer-1 {
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+.spacer-2 {
+    margin-top: 60px;
+    margin-bottom: 10px;
+}

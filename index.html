@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>いろんな 掲示板</title>
+
+    <!-- load jQuery from network -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- load styles from style.css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- title header -->
+    <p class="space-top text-center fs-3 fw-bold font-monospace">いろんな 掲示板</p>
+
+    <!-- site description -->
+    <p class="text-center fs-6 font-monospace">
+        このサイトでは、自分の好きな掲示板（スレッド）を作成し、
+        <br>そのスレッド上で投稿・会話をすることができます。
+    </p>
+
+    <!-- navbar with 3 rows and search bar -->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <p>最近作成されたスレッド</p>
+        </div>
+    </nav>
+
+    <!-- thread create form -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form action="thread_create.php" method="post">
+                    <div class="form-group">
+                        <label for="thread_title">スレッドタイトル</label>
+                        <input type="text" class="form-control" id="thread_title" name="thread_title">
+                    </div>
+                    <div class="form-group">
+                        <label for="thread_content">スレッド内容</label>
+                        <textarea class="form-control" id="thread_content" name="thread_content" rows="3"></textarea>
+                    </div>
+                    <!-- thread rule -->
+                    <div class="form-group">
+                        <label for="thread_rule">スレッドルール</label>
+                        <textarea class="form-control" id="thread_rule" name="thread_rule" rows="5">R18並びにNSFWコンテンツの投稿は禁止です。
+出会い目的での利用は禁止です。
+パスワード等個人情報の添付はやめてください。</textarea>
+                    <button type="submit" class="btn btn-primary">スレッド作成</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  -->
+    
+
+</body>
+</html>
